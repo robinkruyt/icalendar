@@ -3,7 +3,8 @@ defmodule ICalendar.Event do
   Calendars have events.
   """
 
-  defstruct summary:     nil,
+  defstruct uid:         nil,
+            summary:     nil,
             dtstart:     nil,
             dtend:       nil,
             description: nil,
