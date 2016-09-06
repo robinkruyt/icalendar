@@ -4,6 +4,7 @@ defmodule ICalendar.Event do
   """
 
   defstruct uid:         nil,
+            sequence:    0,
             summary:     nil,
             dtstart:     nil,
             dtend:       nil,
