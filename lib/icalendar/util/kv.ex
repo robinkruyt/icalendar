@@ -21,6 +21,14 @@ defmodule ICalendar.Util.KV do
   def build("DESCRIPTION" = key, value ) do
     build_sanitized(key, value)
   end
+  
+  def build("DTSTART" = key, value ) do
+    build("#{key};TZID=Europe/Amsterdam", value)
+  end
+  
+  def build("DTEND" = key, value ) do
+    build("#{key};TZID=Europe/Amsterdam", value)
+  end
 
   def build(key, value) do
     "#{key}:#{value}\n"
